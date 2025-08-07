@@ -4,9 +4,9 @@ public class Cadastro {
 
 	private String nome;
 	private String cpf;
-	private String idade;
+	private int idade;
 
-	public Cadastro(String nome, String cpf, String idade) {
+	public Cadastro(String nome, String cpf, int idade) {
 		this.nome = nome;
 		this.cpf = cpf;
 		this.idade = idade;
@@ -28,12 +28,17 @@ public class Cadastro {
 		this.cpf = cpf;
 	}
 
-	public String getIdade() {
+	public int getIdade() {
 		return idade;
 	}
 
-	public void setIdade(String idade) {
+	public void setIdade(int idade) {
 		this.idade = idade;
+	}
+
+	@Override
+	public String toString() {
+		return "Cadastro \n nome: " + nome + ", \n cpf: " + cpf + ", \n idade: " + idade + "";
 	}
 
 }
